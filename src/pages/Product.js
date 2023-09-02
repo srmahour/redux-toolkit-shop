@@ -8,7 +8,8 @@ export default function Product(){
     const navigate = useNavigate();
     const params = useParams();
     
-    const [product, status] = FetchApi(`products/${params.id}`);
+    const { data, status } = useSelector((state) => state.product);
+    const product = data[params.id - 1];
 
     if(status === 'idle'){
         return(
