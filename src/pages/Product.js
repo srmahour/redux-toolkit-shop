@@ -2,7 +2,8 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Image from "../component/Image";
 import Button from "../component/Button";
-import FetchApi from "../customHook/FetchApi";
+import { useSelector } from "react-redux";
+
 
 export default function Product(){
     const navigate = useNavigate();
